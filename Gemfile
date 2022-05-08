@@ -8,11 +8,17 @@ gem 'rails', '~> 6.0.4', '>= 6.0.4.1'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 
+# API CLIENT
+gem 'spacex_api'
+
 # CLI helpers
 gem 'colorize'
 
 # Cross-Origin Resource Sharing (CORS), make cross-origin AJAX possible
 gem 'rack-cors'
+
+# Haversine Distance
+gem 'haversine'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
