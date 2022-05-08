@@ -1,0 +1,19 @@
+version: '3.5'
+
+services:
+  onion-api-rails:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: onion-api-example
+    volumes:
+      - .:/onion-api
+    container_name: onion-api-rails
+    command:  bash -c "rails server -b 0.0.0.0"
+    environment:
+      - RAILS_ENV=${RAILS_ENV:-development}
+      - HOSTNAME=onion-api-rails
+      - SERVICE_NAME=onion-api
+    ports:
+      - 3000:3000
+    restart: on-failure
